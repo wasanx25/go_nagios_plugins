@@ -14,6 +14,7 @@ type Database struct {
 	PassWord string
 	Host     string
 	Instance string
+	Port     int
 }
 
 func Set() *Database {
@@ -21,6 +22,7 @@ func Set() *Database {
 	var password = flag.String("p", "root", "select database password")
 	var host = flag.String("h", "localhost", "select database host")
 	var instance = flag.String("i", "", "select database instance")
+	var port = flag.Int("P", 1433, "select database port")
 	flag.Parse()
 
 	database := &Database{
@@ -28,6 +30,7 @@ func Set() *Database {
 		PassWord: *password,
 		Host:     *host,
 		Instance: *instance,
+		Port:     *port,
 	}
 
 	return database
@@ -41,7 +44,7 @@ func (database *Database) Connect() *sql.DB {
 	u := &url.URL{
 		Scheme: "sqlserver",
 		User:   url.UserPassword(database.UserName, database.PassWord),
-		Host:   fmt.Sprintf("%s:%d", database.Host, 1433),
+		Host:   fmt.Sprintf("%s:%d", database.Host, database.Port),
 		Path:   database.Instance,
 	}
 

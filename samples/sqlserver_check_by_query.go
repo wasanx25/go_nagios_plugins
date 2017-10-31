@@ -5,7 +5,7 @@ import (
 	"github.com/wataru0225/go_nagios_plugins/utils"
 )
 
-// /path/to/sqlserver_check_by_query -u username -p password -h www.example.com -i instance
+// /path/to/sqlserver_check_by_query -u username -p password -h www.example.com -i instance -P port
 func main() {
 	database := lib.Set()
 
