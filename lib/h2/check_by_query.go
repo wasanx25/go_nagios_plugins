@@ -21,7 +21,7 @@ func Set() *Database {
 	var username = flag.String("u", "root", "select database username")
 	var password = flag.String("p", "root", "select database password")
 	var host = flag.String("h", "localhost", "select database host")
-	var port = flag.Int("P", 9876, "select database port")
+	var port = flag.Int("P", 5435, "select database port")
 	var dbname = flag.String("n", "", "select database name")
 	flag.Parse()
 
