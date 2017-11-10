@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/wataru0225/go_nagios_plugins/lib/h2"
+	"github.com/wataru0225/go_nagios_plugins/lib/check_h2"
 	"github.com/wataru0225/go_nagios_plugins/utils"
 )
 
