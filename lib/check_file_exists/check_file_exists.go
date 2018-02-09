@@ -1,4 +1,4 @@
-package check_file_exists
+package fileexists
 
 import (
 	"path/filepath"

@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	check_file_exists.Do()
+	fileexists.Do()
 }
