@@ -7,7 +7,7 @@ import (
 
 // /path/to/h2_check_by_query -u username -p password -h www.example.com -P port -n dbname
 func main() {
-	database := lib.Set()
+	database := checkh2.Set()
 
 	db := database.Connect()
 	if db == nil {

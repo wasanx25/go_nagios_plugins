@@ -7,7 +7,7 @@ import (
 
 // /path/to/sqlserver_check_by_query -u username -p password -h www.example.com -i instance -P port
 func main() {
-	database := lib.Set()
+	database := checkmssql.Set()
 
 	db := database.Connect()
 	if db == nil {

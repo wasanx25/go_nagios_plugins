@@ -1,4 +1,4 @@
-package lib
+package checkh2
 
 import (
 	"database/sql"

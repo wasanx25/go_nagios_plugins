@@ -1,4 +1,4 @@
-package lib
+package checkmssql
 
 import (
 	"database/sql"
